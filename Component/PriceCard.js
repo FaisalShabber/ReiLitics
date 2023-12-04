@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import styled from "./pictureCard.module.css";
 
 const PriceCard = ({ data, userPackageId, handleFreeSubscription, userEmail }) => {
   return data.map((each) => (
@@ -49,7 +50,7 @@ const PriceCard = ({ data, userPackageId, handleFreeSubscription, userEmail }) =
           {userPackageId === each._id ? (
             <button
               type="button"
-              className="btn btn_width brdr_2 py-3 mt-5 mt-5"
+              className={`btn btn_width brdr_2 py-3 mt-5 mt-5 ${styled.button}`}
               style={{ backgroundColor: "#2169ef", color: "#fff" }}
             >
               Currently Subscribed
