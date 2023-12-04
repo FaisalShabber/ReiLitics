@@ -4,7 +4,7 @@ import GetData from "../Api/GetData";
 import Link from "next/link";
 import Acount from "../Api/Acount";
 import CustomModal from "./Modal";
-import { axiosInstance } from '../pages/_app';
+import { axiosInstance } from "../pages/_app";
 import PersonalInfo from "./PersonalInfo";
 import Navbar from "./Navbar";
 import OtpModal from "./Login/Otp";
@@ -19,7 +19,7 @@ import { useFormik } from "formik";
 import paymentMethodClasses from "./EditProfile.module.css";
 import * as Yup from "yup";
 import { LoadingOutlined } from "@ant-design/icons";
-
+import styled from './payment.module.css'
 export const stripe = new Stripe(
   "sk_test_51Mw2BLFvfpbJnXSJUkI3g6z4NM90CBMvDpmp9p9xryx5EUbHQlPcRg097Eb9IZ9Rj8IJpuK68tbIKB7JiankVe8Z00f3xw37wE"
 );
@@ -71,7 +71,11 @@ const Payment = ({
       setClientId(value.data.clientID);
     });
 
-    const packageId = routerId ? routerId : packageId ? packageId : localStorage.getItem('pkgId');
+    const packageId = routerId
+      ? routerId
+      : packageId
+      ? packageId
+      : localStorage.getItem("pkgId");
 
     const response2 = GetData.SinglePackage(packageId);
 
@@ -91,8 +95,8 @@ const Payment = ({
       });
       setPaymentMethods(response?.data?.paymentMethods || []);
     } catch (err) {
-      if(err.response.data.message === 'Not authorized, token failed'){
-        window.location.href = '/SignUp';
+      if (err.response.data.message === "Not authorized, token failed") {
+        window.location.href = "/SignUp";
       } else {
         setPaymentMethods([]);
       }
@@ -211,7 +215,11 @@ const Payment = ({
         card: cardDetails,
       });
 
-      const packageId = routerId ? routerId : packageId ? packageId : localStorage.getItem('pkgId');
+      const packageId = routerId
+        ? routerId
+        : packageId
+        ? packageId
+        : localStorage.getItem("pkgId");
 
       // return;
       axiosNodeApi
@@ -353,7 +361,7 @@ const Payment = ({
     }
   };
 
-  console.log('package details => ', packageDetails);
+  console.log("package details => ", packageDetails);
 
   return (
     <>
@@ -375,7 +383,8 @@ const Payment = ({
                       <div className="uper-color p-4 mb-4">
                         <p className="text-white fs-40 Gothic_3D mb-0 p-4 ms-5">
                           Payment{" "}
-                          {packageDetails?.price && `( $${packageDetails?.price} - ${packageDetails?.name} Subscription )`}
+                          {packageDetails?.price &&
+                            `( $${packageDetails?.price} - ${packageDetails?.name} Subscription )`}
                         </p>
                       </div>
                       <div className="row bg-pric p-3 "></div>
@@ -489,106 +498,111 @@ const Payment = ({
                                 </div>
                               </div>
                             ))}
-                            {packageDetails?.name !== 'Yearly' && (
-                              <div className="col-md-12 col-sm-12 mt-4">
-                                <div className="form-group my-4">
-                                  <label
-                                    className="fs-17 mb-2"
-                                    style={{
-                                      fontSize: "15px",
-                                      lineHeight: "22.5px",
-                                      fontWeight: "300",
-                                    }}
-                                  >
-                                    Coupon:
-                                  </label>
-                                  <input
-                                    type="text"
-                                    // autoComplete={false}
-                                    className="form-control"
-                                    name="name"
-                                    id="name"
-                                    placeholder="Coupon Code"
-                                    onChange={(e) => {
-                                      const filtered = couponList.find(
-                                        (item) =>
-                                          item.coupon_code === e.target.value
+                          {packageDetails?.name !== "Yearly" && (
+                            <div className="col-md-12 col-sm-12 mt-4">
+                              <div className="form-group my-4">
+                                <label
+                                  className="fs-17 mb-2"
+                                  style={{
+                                    fontSize: "15px",
+                                    lineHeight: "22.5px",
+                                    fontWeight: "300",
+                                  }}
+                                >
+                                  Coupon:
+                                </label>
+                                <input
+                                  type="text"
+                                  // autoComplete={false}
+                                  className="form-control"
+                                  name="name"
+                                  id="name"
+                                  placeholder="Coupon Code"
+                                  onChange={(e) => {
+                                    const filtered = couponList.find(
+                                      (item) =>
+                                        item.coupon_code === e.target.value
+                                    );
+                                    if (filtered) {
+                                      calculatePriceHandler(
+                                        filtered.coupon_code
                                       );
-                                      if (filtered) {
-                                        calculatePriceHandler(filtered.coupon_code);
-                                        setPackageIDLocal(filtered._id);
-                                      } else {
-                                        setCouponError("Invalid");
-                                        setPackageIDLocal(null);
-                                        setCalculatePrice(0);
+                                      setPackageIDLocal(filtered._id);
+                                    } else {
+                                      setCouponError("Invalid");
+                                      setPackageIDLocal(null);
+                                      setCalculatePrice(0);
+                                    }
+                                    setCoupon(e.target.value);
+                                  }}
+                                  value={coupon}
+                                />
+                                {couponError && coupon && (
+                                  <div>
+                                    <div
+                                      style={
+                                        couponError === "Invalid" ||
+                                        couponError === "expired"
+                                          ? {
+                                              width: "100%",
+                                              display: "flex",
+                                              justifyContent: "space-between",
+                                              alignItems: "center",
+                                              gap: "20px",
+                                              textTransform: "capitalize",
+                                              color: "red",
+                                              marginTop: "10px",
+                                            }
+                                          : {
+                                              width: "100%",
+                                              display: "flex",
+                                              justifyContent: "space-between",
+                                              alignItems: "center",
+                                              gap: "20px",
+                                              textTransform: "capitalize",
+                                              color: "green",
+                                              marginTop: "10px",
+                                            }
                                       }
-                                      setCoupon(e.target.value);
-                                    }}
-                                    value={coupon}
-                                  />
-                                  {(couponError && coupon) && (
-                                    <div>
-                                      <div
-                                        style={
-                                          (couponError === "Invalid" || couponError === 'expired') ? 
-                                          {
-                                            width: "100%",
-                                            display: "flex",
-                                            justifyContent: "space-between",
-                                            alignItems: "center",
-                                            gap: "20px",
-                                            textTransform: 'capitalize',
-                                            color: 'red',
-                                            marginTop: '10px',
-                                          } :
-                                          {
-                                            width: "100%",
-                                            display: "flex",
-                                            justifyContent: "space-between",
-                                            alignItems: "center",
-                                            gap: "20px",
-                                            textTransform: 'capitalize',
-                                            color: 'green',
-                                            marginTop: '10px',
-                                        }}
-                                      >
-                                        {couponError} Coupon
-                                      </div>
-                                      <div style={{ marginTop: "8px" }}>
-                                        {packageIDLocal && calculatePrice > 0 && (
-                                          <p
-                                            className={clsx("mb-0")}
-                                            style={{
-                                              color: "black",
-                                              fontWeight: "bold",
-                                            }}
-                                          >
-                                            Amount to be Paid ${calculatePrice} (
-                                            {couponDetails.percent_off}%)
-                                          </p>
-                                        )}
-                                      </div>
-                                      <div style={{ marginTop: "8px" }}>
-                                        {packageIDLocal && calculatePrice > 0 && (
-                                          <p
-                                            className={clsx("mb-0")}
-                                            style={{
-                                              color: "black",
-                                              fontWeight: "bold",
-                                            }}
-                                          >
-                                            <strong style={{ fontSize: "15px" }}>
-                                              Note:
-                                            </strong>{" "}
-                                            {`Your coupon will be valid for next ${couponDetails.duration_in_months} months, after that you will get charged $${couponDetails.actualPrice}/${packageDetails?.stripe_package_type}`}
-                                          </p>
-                                        )}
-                                      </div>
+                                    >
+                                      {couponError} Coupon
                                     </div>
-                                  )}
-                                </div>
+                                    <div style={{ marginTop: "8px" }}>
+                                      {packageIDLocal && calculatePrice > 0 && (
+                                        <p
+                                          className={clsx("mb-0")}
+                                          style={{
+                                            color: "black",
+                                            fontWeight: "bold",
+                                          }}
+                                        >
+                                          Amount to be Paid ${calculatePrice} (
+                                          {couponDetails.percent_off}%)
+                                        </p>
+                                      )}
+                                    </div>
+                                    <div style={{ marginTop: "8px" }}>
+                                      {packageIDLocal && calculatePrice > 0 && (
+                                        <p
+                                          className={clsx("mb-0" ) `${styled.detail}`}
+                                          style={{
+                                            color: "black",
+                                            fontWeight: "bold",
+                                      
+                                          }}
+                                        >
+                                          <strong style={{ fontSize: "15px" }} >
+                                            Note:
+                                          </strong>{" "}
+                                          {`Your coupon will be valid for next ${couponDetails.duration_in_months} months, after that you will get charged $${couponDetails.actualPrice}/${packageDetails?.stripe_package_type}`}
+                                        </p>
+                                      )}
+                                    </div>
+                                  </div>
+                                )}
                               </div>
-                            )}
+                            </div>
+                          )}
                           <div
                             // className="p-5"
                             style={
@@ -702,7 +716,6 @@ const Payment = ({
                                     <label
                                       className="fs-17 mb-2"
                                       style={{
-
                                         fontSize: "15px",
                                         lineHeight: "22.5px",
                                         fontWeight: "300",
@@ -760,7 +773,6 @@ const Payment = ({
                                     <label
                                       className="fs-17 mb-2"
                                       style={{
-
                                         fontSize: "15px",
                                         lineHeight: "22.5px",
                                         fontWeight: "300",
@@ -999,7 +1011,9 @@ const Payment = ({
                                         item.coupon_code === e.target.value
                                     );
                                     if (filtered) {
-                                      calculatePriceHandler(filtered.coupon_code);
+                                      calculatePriceHandler(
+                                        filtered.coupon_code
+                                      );
                                       setPackageIDLocal(filtered._id);
                                     } else {
                                       setPackageIDLocal(null);
@@ -1015,71 +1029,75 @@ const Payment = ({
                                     border: "1px solid #ef6920",
                                   }}
                                 />
-                                {(couponError && coupon) && (
-                                    <div>
-                                      <div
-                                        style={
-                                          (couponError === "Invalid" || couponError === 'expired') ? 
-                                          {
-                                            width: "100%",
-                                            display: "flex",
-                                            justifyContent: "space-between",
-                                            alignItems: "center",
-                                            gap: "20px",
-                                            textTransform: 'capitalize',
-                                            color: 'red',
-                                            marginTop: '10px',
-                                          } :
-                                          {
-                                            width: "100%",
-                                            display: "flex",
-                                            justifyContent: "space-between",
-                                            alignItems: "center",
-                                            gap: "20px",
-                                            textTransform: 'capitalize',
-                                            color: 'green',
-                                            marginTop: '10px',
-                                        }}
-                                      >
-                                        {couponError} Coupon
-                                      </div>
-                                      <div style={{ marginTop: "8px" }}>
-                                        {packageIDLocal && calculatePrice > 0 && (
-                                          <p
-                                            className={clsx("mb-0")}
-                                            style={{
-                                              color: "black",
-                                              fontWeight: "bold",
-                                            }}
-                                          >
-                                            Amount to be Paid ${calculatePrice} (
-                                            {couponDetails.percent_off}%)
-                                          </p>
-                                        )}
-                                      </div>
-                                      <div style={{ marginTop: "8px" }}>
-                                        {packageIDLocal && calculatePrice > 0 && (
-                                          <p
-                                            className={clsx("mb-0")}
-                                            style={{
-                                              color: "black",
-                                              fontWeight: "bold",
-                                            }}
-                                          >
-                                            <strong style={{ fontSize: "15px" }}>
-                                              Note:
-                                            </strong>{" "}
-                                            {`Your coupon will be valid for next ${couponDetails.duration_in_months} months, after that you will get charged $${couponDetails.actualPrice}/${packageDetails?.stripe_package_type}`}
-                                          </p>
-                                        )}
-                                      </div>
+                                {couponError && coupon && (
+                                  <div>
+                                    <div
+                                      style={
+                                        couponError === "Invalid" ||
+                                        couponError === "expired"
+                                          ? {
+                                              width: "100%",
+                                              display: "flex",
+                                              justifyContent: "space-between",
+                                              alignItems: "center",
+                                              gap: "20px",
+                                              textTransform: "capitalize",
+                                              color: "red",
+                                              marginTop: "10px",
+                                            }
+                                          : {
+                                              width: "100%",
+                                              display: "flex",
+                                              justifyContent: "space-between",
+                                              alignItems: "center",
+                                              gap: "20px",
+                                              textTransform: "capitalize",
+                                              color: "green",
+                                              marginTop: "10px",
+                                            }
+                                      }
+                                    >
+                                      {couponError} Coupon
                                     </div>
-                                  )}
+                                    <div style={{ marginTop: "8px" }}>
+                                      {packageIDLocal && calculatePrice > 0 && (
+                                        <p
+                                          className={clsx("mb-0")}
+                                          style={{
+                                            color: "black",
+                                            fontWeight: "bold",
+                                          }}
+                                        >
+                                          Amount to be Paid ${calculatePrice} (
+                                          {couponDetails.percent_off}%)
+                                        </p>
+                                      )}
+                                    </div>
+                                    <div style={{ marginTop: "8px" }}>
+                                      {packageIDLocal && calculatePrice > 0 && (
+                                        <p
+                                          className={ `${styled.detail} ${clsx("mb-0")}`}
+                                          style={{
+                                            color: "black",
+                                            fontWeight: "bold",
+              
+                                          }}
+                                        >
+                                          <strong style={{ fontSize: "15px" }}>
+                                            Note:
+                                          </strong>{" "}
+                                          {`Your coupon will be valid for next ${couponDetails.duration_in_months} months, after that you will get charged $${couponDetails.actualPrice}/${packageDetails?.stripe_package_type}`}
+                                        </p>
+                                      )}
+                                    </div>
+                                  </div>
+                                )}
                               </div>
                             )}
 
                             <button
                               type="submit"
+                              style={{height:"40px",width:"100px"}}
                               className={clsx(
                                 `${classes.sign} py-0 m-0 btn hover`
                               )}
