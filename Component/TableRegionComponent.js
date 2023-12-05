@@ -29,7 +29,11 @@ const TableRegionComponent = ({ onClick, ...props }) => {
   return (
     <>
       <div className="d-flex my-auto hover w-100 p-1 hover_Bold pointer-cursor">
-        <Link href={`/MarketStats/${props.record.regionID}`} passHref>
+        <Link
+          href={`/MarketStats/${props.record.regionID}`}
+          style={{ width: "80%" }}
+          passHref
+        >
           <p
             className="my-auto me-auto"
             onClick={(e) => onClick(e, props.record)}
@@ -37,24 +41,28 @@ const TableRegionComponent = ({ onClick, ...props }) => {
             {props.record.region}
           </p>
         </Link>
+
         {isFavourite ? (
-          <img
-            alt="filledHeart"
-            src="/filledHeart.svg"
-            onClick={() => DeleteFavrt(props.record.regionID)}
-            className="ms-auto my-auto"
-          />
+          <div style={{ width: "20%" ,paddingLeft:"6px"}}>
+              <img
+                alt="filledHeart"
+                src="/filledHeart.svg"
+                onClick={() => DeleteFavrt(props.record.regionID)}
+                className="ms-auto my-auto"
+              />
+          </div>
         ) : (
-          <img
-            alt="unfilledHeart"
-            src="/unfilledHeart.svg"
-            onClick={() => AddFavourite(props.record)}
-            className="ms-auto"
-          />
+          <div style={{ width: "20%" ,paddingLeft:"6px"}}>
+              <img
+                alt="unfilledHeart"
+                src="/unfilledHeart.svg"
+                onClick={() => AddFavourite(props.record)}
+                className="ms-auto"
+              />
+          </div>
         )}
       </div>
     </>
   );
 };
-
 export default TableRegionComponent;
