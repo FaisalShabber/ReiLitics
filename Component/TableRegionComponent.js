@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-
+import styled from './tableregion.module.css'
 const TableRegionComponent = ({ onClick, ...props }) => {
   const [isFavourite, setIsFavourite] = useState(false);
 
@@ -31,8 +31,9 @@ const TableRegionComponent = ({ onClick, ...props }) => {
       <div className="d-flex my-auto hover w-100 p-1 hover_Bold pointer-cursor">
         <Link
           href={`/MarketStats/${props.record.regionID}`}
-          style={{ width: "80%" }}
+          
           passHref
+          className={styled.parentDiv}
         >
           <p
             className="my-auto me-auto"
@@ -43,7 +44,7 @@ const TableRegionComponent = ({ onClick, ...props }) => {
         </Link>
 
         {isFavourite ? (
-          <div style={{ width: "20%" ,paddingLeft:"6px"}}>
+          <div  className={styled.childDiv}>
               <img
                 alt="filledHeart"
                 src="/filledHeart.svg"
@@ -52,7 +53,7 @@ const TableRegionComponent = ({ onClick, ...props }) => {
               />
           </div>
         ) : (
-          <div style={{ width: "20%" ,paddingLeft:"6px"}}>
+          <div className={styled.childDiv}>
               <img
                 alt="unfilledHeart"
                 src="/unfilledHeart.svg"
