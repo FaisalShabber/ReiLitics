@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53">
+  <g id="squareGmail" transform="translate(-881 -735)">
+    <g id="Group_18" data-name="Group 18">
+      <g id="Group_17" data-name="Group 17" transform="translate(37 82)">
+        <rect id="Rectangle_201" data-name="Rectangle 201" width="53" height="53" transform="translate(844 653)" fill="#118df7"/>
+      </g>
+      <g id="gmail" transform="translate(888.75 688.233)">
+        <g id="Group_11" data-name="Group 11" transform="translate(2.445 60.983)">
+          <path id="Path_44" data-name="Path 44" d="M66.455,122.808l-2.394,24.039H35.308l-1.929-23.573L49.684,132.4Z" transform="translate(-33.379 -118.28)" fill="#f2f2f2"/>
+          <path id="Path_45" data-name="Path 45" d="M70.031,60.983,54.072,75.974,38.114,60.983H70.031Z" transform="translate(-37.767 -60.983)" fill="#f2f2f2"/>
+        </g>
+        <path id="Path_46" data-name="Path 46" d="M4.373,115.155V136.8H1.768A1.768,1.768,0,0,1,0,135.032V111.967l2.856.078Z" transform="translate(0 -47.25)" fill="#f14336"/>
+        <path id="Path_47" data-name="Path 47" d="M456.661,109.188v23.065a1.769,1.769,0,0,1-1.769,1.768h-2.6V112.376l1.442-3.408Z" transform="translate(-419.162 -44.47)" fill="#d32e2a"/>
+        <path id="Path_48" data-name="Path 48" d="M37.5,62.751v1.966l-4.373,3.188L18.75,78.384,4.373,67.905,0,64.717V62.751a1.768,1.768,0,0,1,1.768-1.768H2.792L18.75,72.615,34.708,60.983h1.023A1.769,1.769,0,0,1,37.5,62.751Z" fill="#f14336"/>
+        <path id="Path_49" data-name="Path 49" d="M4.373,115.155,0,114.477v-2.51Z" transform="translate(0 -47.25)" fill="#d32e2a"/>
+      </g>
+    </g>
+  </g>
+</svg>

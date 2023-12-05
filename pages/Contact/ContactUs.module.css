@@ -1,0 +1,67 @@
+.heading {
+  font-size: 30px;
+  width: 80%;
+  color: #464646;
+  font-weight: bolder;
+}
+
+.subHeading {
+  font-size: 14px;
+  width: 80%;
+  color: #464646;
+}
+
+.subHeading2 {
+  font-size: 26px;
+  width: 80%;
+  font-weight: bold;
+  color: #464646;
+}
+
+.subHeading3 {
+  color: #464646;
+}
+
+/* .phoneInputInput{
+    background-color: #FAFAFA;
+} */
+
+.formField {
+  background-color: #fafafa;
+  border: 0.1px solid #e8f2ff;
+  padding: 6px;
+  border-radius: 12px;
+  color: #464646;
+}
+
+.phoneInput {
+  background-color: #fafafa;
+  border: 0.1px solid #e8f2ff;
+  padding: 4px;
+  border-radius: 12px;
+  color: #464646;
+}
+
+.textarea {
+  height: 120px;
+}
+
+.button {
+  background: #ef6921;
+  color: white;
+  padding: 6px 40px;
+  border-radius: 0px;
+}
+
+.positionRight {
+  margin-left: auto !important    ;
+}
+
+.Email {
+  margin: 13px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}

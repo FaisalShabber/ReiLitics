@@ -1,0 +1,114 @@
+.dashNavColor .navbarText {
+  color: #022945 !important;
+}
+.navbarText {
+  color: #022945 !important;
+}
+.dashNavColor .navbarText:hover {
+  color: #ef6921 !important;
+}
+.navbarText:hover {
+  color: #ef6921 !important;
+}
+
+.hoverButton {
+  background-color: #212529 !important;
+  color: white;
+}
+.hoverButton:hover {
+  color: black;
+  background-color: #153952 !important;
+}
+
+.navcolor {
+  background-color: #fff;
+  height: 100px;
+}
+
+.ImgSize {
+  width: 14.6rem !important;
+}
+
+.ImgSize:hover {
+  cursor: pointer;
+}
+
+.active {
+  background-color: #041e31 !important;
+  color: #ffda5f !important;
+}
+
+.NavBtnPadding {
+  padding-top: 3.2rem;
+  padding-bottom: 3.1rem;
+  padding-left: 1.3rem !important;
+  padding-right: 1.3rem !important;
+}
+
+@media only screen and (max-width: 994px) {
+  .NavBtnPadding {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    margin-left: 1.4rem;
+    border-left: 0px;
+    border-left: 0px;
+    border-top: 1px solid #153952;
+    border-bottom: 1px solid #153952;
+  }
+
+  .login,
+  .sign,
+  .notiBtn,
+  .profileBtn {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    margin-left: 1.8rem !important;
+  }
+
+  .ImgSize {
+    margin: 1.8rem !important;
+  }
+}
+
+.sign {
+  background-color: #ef6921 !important;
+  border: 0.1rem solid #ef6921 !important;
+  color: #fff;
+  font-size: smaller;
+  height: 2.8rem;
+  width: 7.5rem;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.sign:hover {
+  background-color: transparent !important;
+  color: #ef6921;
+}
+
+.login {
+  background-color: transparent !important;
+  color: #ef6921;
+  font-size: smaller;
+  height: 2.8rem;
+  width: 7.5rem;
+  font-size: 1.4rem;
+  border-color: #ef6921;
+  border-radius: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.login:hover,
+.login:active {
+  background-color: #ef6921 !important;
+  color: #fff !important;
+  border: 1px solid #ef6921;
+}

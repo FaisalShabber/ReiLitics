@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39" height="39" viewBox="0 0 39 39">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffd954"/>
+      <stop offset="0.493" stop-color="#fc553e"/>
+      <stop offset="1" stop-color="#cb38a3"/>
+    </linearGradient>
+  </defs>
+  <g id="circleInstagram" transform="translate(0.07 0.038)">
+    <circle id="Ellipse_317" data-name="Ellipse 317" cx="19.5" cy="19.5" r="19.5" transform="translate(-0.07 -0.038)" fill="url(#linear-gradient)"/>
+    <path id="Path_185" data-name="Path 185" d="M17.494,3.144c-5.882,0-11.468-.523-13.6,4.952-.881,2.262-.753,5.2-.753,9.4,0,3.69-.118,7.159.753,9.4,2.129,5.479,7.76,4.954,13.6,4.954,5.633,0,11.441.586,13.6-4.954.883-2.284.753-5.178.753-9.4,0-5.608.309-9.229-2.411-11.948C26.68,2.8,22.955,3.144,17.488,3.144ZM16.208,5.731C28.478,5.712,30.04,4.348,29.178,23.3c-.306,6.7-5.409,5.967-11.682,5.967-11.437,0-11.766-.327-11.766-11.769,0-11.575.907-11.756,10.478-11.766Zm8.949,2.383a1.722,1.722,0,1,0,1.722,1.722A1.722,1.722,0,0,0,25.157,8.115Zm-7.663,2.014A7.372,7.372,0,1,0,24.864,17.5a7.372,7.372,0,0,0-7.369-7.373Zm0,2.587c6.326,0,6.334,9.571,0,9.571S11.16,12.715,17.494,12.715Z" transform="translate(1.986 1.965)" fill="#fff"/>
+  </g>
+</svg>

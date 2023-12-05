@@ -1,0 +1,153 @@
+.fontbold {
+  font-size: 1.7rem;
+  font-weight: 700 !important;
+  text-decoration: none;
+  color: black;
+}
+.fontline {
+  text-decoration: none;
+  color: #fff;
+  width: fit-content;
+  display: flex;
+}
+.font-30 {
+  font-size: 2.5rem;
+}
+
+.font-23 {
+  font-size: 2rem;
+}
+
+.footerp {
+  font-size: 1.6rem;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 32px;
+}
+
+.a {
+  text-decoration: none !important;
+}
+
+.footer-background > div {
+  padding-top: 0em;
+}
+
+.footer-background {
+  /* background-color: rgb(36, 37, 36); */
+  padding: 74px 0 3rem 0;
+  /* background-image: url("/footer-bg.png"); */
+  background-color: #f3f1ed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.footercolor {
+  background-color: #000;
+  /* margin-top: 20px; */
+}
+
+.footerCreditText {
+  margin-left: 0.5rem;
+  border-left: 2px solid #fff;
+  padding-left: 0.5rem;
+}
+
+.footerCreditLink {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.btninfo {
+  background-color: #242424 !important;
+  color: #fff;
+  transition: 300ms ease-in-out;
+  border-radius: 0.4rem !important;
+}
+
+.btninfo:hover {
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.facebook {
+  color: #38529a;
+  width: 30px;
+  height: 30px;
+}
+
+.pinterest {
+  color: red;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+}
+
+.twitter {
+  color: white;
+  background-color: #4da6e9;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.linkedin {
+  color: white;
+  background-color: #017aae;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  padding: 4px;
+}
+
+.insta {
+  color: white;
+  background-color: #d53087;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+@media (max-width: 992px) {
+  .footer-background {
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width: 1300px) {
+  .footer-background {
+    padding: 3.5rem 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer-background {
+    padding: 4rem 0;
+    height: auto !important;
+  }
+  .footer-background > div {
+    padding-top: 0;
+  }
+  .footercolor {
+    text-align: center;
+  }
+  .font-30 {
+    font-size: 3rem;
+  }
+
+  .font-23 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 4300px) {
+  .footer-background {
+    padding: 14rem 0 4rem 0;
+  }
+  .footercolor {
+    text-align: center;
+  }
+}

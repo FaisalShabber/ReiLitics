@@ -1,0 +1,9 @@
+.bg_text {
+    flex-direction: column;
+    background: #FAFAFA;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    font-size: medium;
+    line-height: 0.6cm;
+}

@@ -1,0 +1,20 @@
+.date {
+  display: flex;
+  flex-direction: column;
+  width: 4.8rem;
+  line-height: 1.7rem;
+  height: 4.9rem;
+  border: 0.1rem solid #ececec;
+  background-color: #ef6921;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.dateMonth {
+  font-size: 1.5rem;
+}
+
+.dateDay {
+  font-size: 1.6rem;
+}

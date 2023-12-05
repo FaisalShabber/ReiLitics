@@ -1,0 +1,30 @@
+.bgLogin {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(220, 222, 236, 0.9) 0%,
+      rgba(211, 215, 228, 0.9) 100%
+    ),
+    url("/Bg_Theme.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 72rem;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 720px) {
+  .bgLogin {
+    min-height: 100vh;
+    height: auto;
+  }
+}
+
+.bgBlue {
+  background-color: #080c26 !important;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.form-control {
+  font-size: 1.5rem !important;
+}

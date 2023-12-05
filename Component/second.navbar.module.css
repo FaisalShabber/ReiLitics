@@ -1,0 +1,77 @@
+.button_container {
+  display: grid;
+  width: 211px;
+  height: 108px;
+  border-radius: 12px;
+  font-size: 18px;
+  border: none;
+  padding: 16px 20px;
+}
+.button_market_notactive {
+  background-color: white;
+  border: 1px solid #ec8a88 !important;
+  color: #ec8a88;
+}
+.button_market_active {
+  background-color: #ec8a88;
+  color: white;
+}
+.button_economic_notactive {
+  background-color: white;
+  border: 1px solid #f7d680 !important;
+  color: #f7d680;
+}
+.button_economic_active {
+  background-color: #f7d680;
+  color: white;
+}
+.button_demographic_notactive {
+  background-color: white;
+  border: 1px solid #a1e9c4 !important;
+  color: #a1e9c4;
+}
+.button_demographic_active {
+  background-color: #a1e9c4;
+  color: white;
+}
+.button_notes_notactive {
+  background-color: white;
+  border: 1px solid #5fb6e9 !important;
+  color: #5fb6e9;
+}
+.button_notes_active {
+  background-color: #5fb6e9;
+  color: white;
+}
+
+.button_market_div {
+  border-bottom: 2px solid #ec8a88 !important;
+  border-radius: 0px;
+}
+.button_economic_div {
+  border-bottom: 2px solid #f7d680 !important;
+  border-radius: 0px;
+}
+.button_demographic_div {
+  border-bottom: 2px solid #a1e9c4 !important;
+  border-radius: 0px;
+}
+.button_notes_div {
+  border-bottom: 2px solid #5fb6e9 !important;
+  border-radius: 0px;
+}
+
+.image_icon {
+  place-self: end;
+}
+
+.main_container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.main_container::-webkit-scrollbar {
+  display: none;
+}

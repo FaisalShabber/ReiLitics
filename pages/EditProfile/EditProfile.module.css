@@ -1,0 +1,51 @@
+.mastercard_outer_container {
+  border-radius: 30px; 
+  background: #FAFBFF;
+}
+
+.mastercard_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mastercard_img {
+  width: 80px;
+}
+
+.mastercard_delete_icon {
+  margin-right: 5rem;
+  margin-top: 1.3rem;
+  width: 16.33px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.mastercard_ending_with_container {
+  margin-top: 12px;
+}
+
+.mastercard_ending_with {
+  font-weight: 600; 
+  font-size: 18px; 
+  line-height: 24.55px; 
+  color: #464646;
+}
+
+.mastercard_name { 
+  margin-right: 10rem; 
+  font-size: 18px; 
+  line-height: 24.55px;
+}
+
+.mastercard_expiry {
+  font-size: 18px; 
+  font-weight: 700; 
+  line-height: 24.55px;
+}
+
+.add_card {
+  text-align: center; 
+  margin-top: 1rem; 
+  font-weight: 500;
+  color: #EF6921;
+}
