@@ -51,7 +51,7 @@ export default function MyNotes() {
               </Link> */}
             </div>
 
-            <div className="row gy-4">
+            <div className="row NoteBox gy-4">
               <NotesComponent2 region={region} />
             </div>
           </div>

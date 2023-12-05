@@ -63,7 +63,7 @@ function Foter() {
             <div className="row">
               <div className="col-md-4 col-sm-6">
                 <p
-                  className={`${classes.fontbold} fot-mon ${classes["font-16"]}`}
+                  className={`${classes.fontbold} fot-mon ${classes["font-16"]} fs-16`}
                 >
                   Pages
                 </p>
@@ -84,7 +84,7 @@ function Foter() {
                 </Link>
               </div>
               <div className="col-md-4 col-sm-6">
-                <p className={`${classes.fontbold}  ${classes["font-16"]}`}>
+                <p className={`${classes.fontbold}  ${classes["font-16"]} fs-16`}>
                   <span className="fot-mon">General Info</span>
                 </p>
                 <Link href="/About">
@@ -110,7 +110,7 @@ function Foter() {
               </div>
               <div className="col-md-4 col-sm-6 text-white">
                 <p
-                  className={`${classes.fontbold} fot-mon ${classes["font-16"]}`}
+                  className={`${classes.fontbold} fot-mon ${classes["font-16"]} fs-16 `}
                 >
                   Subscribe to our newsletter
                 </p>

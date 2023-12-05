@@ -52,7 +52,7 @@ export default function NotesComponent2({ region }) {
   return (
     <>
       {notes?.length > 0 && (
-        <div className="col-lg-3 col-md-4 col-6">
+        <div className="col-lg-3 col-md-2 col-6">
           <Link href="/create-notes" passHref>
             <div className="bg-notes brdr d-flex flex-column pointer-cursor">
               <div className="text-center my-auto">

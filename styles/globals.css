@@ -55,7 +55,25 @@ p.policy-p {
 .fot-mon {
   text-transform: uppercase;
 }
-/* for scroll bar */
+
+
+
+@media only screen and (max-width: 768px) {
+  .NoteBox{
+    /* background-color: #1890ff; */
+    flex-direction: column;
+    width: 100%;
+   align-items: center;
+
+  }
+  .Innerbox{
+    width: 100%;
+  }
+  .col-6 {
+    /* background-color: #000; */
+    width: 100% !important;
+  }
+}
 
 .ScrollBar {
   /* padding-right: 1.0rem; */
