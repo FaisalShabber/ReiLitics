@@ -107,7 +107,7 @@ const MortgageRates = () => {
               </div>
             </div>
           ) : isLoading === "loading" ? (
-            <div className="t-w-full t-h-[544px] t-flex t-items-center t-justify-center">
+            <div className="t-w-full lg:t-h-[544px] t-flex t-items-center t-justify-center">
               <Vortex
                 visible={true}
                 height="80"

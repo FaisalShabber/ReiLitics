@@ -7,10 +7,10 @@
 }
 @media only screen and (max-width: 768px) {
   .parentDiv {
-    width: 60%;
+    width: 70%;
   }
   .childDiv {
-    width: 40%;
+    width: 30%;
     /* padding-left: 6px; */
   }
 }
