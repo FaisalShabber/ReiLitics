@@ -244,7 +244,7 @@ class Aprecation extends React.Component {
         title: "Region",
         info: "zxcvbn",
         key: "region",
-        width: "12%",
+        width: "11%",
         onFilter: (value, record) => record.region.startsWith(value),
         filteredValue: filteredInfo.value || null,
         sortOrder: sortedInfo.columnKey === "region" && sortedInfo.order,

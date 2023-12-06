@@ -31,13 +31,6 @@ export default function MedianGraph(props) {
     const [medianDate, setMedianDate] = useState([])
     const [user, setUser] = useState('')
 
-
-
-
-
-
-
-
     { console.log(props.year) }
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -192,7 +185,8 @@ export default function MedianGraph(props) {
 
 
 
-    return (<div>
+    return (
+    <div style={{backgroundColor:'red'}}>
         <GraphComponent
             listPrice={listPrice}
             heading='Median list price vs median sale price'>

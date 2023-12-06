@@ -180,7 +180,7 @@ export default function MedianGraph(props) {
   // data by year
 
   return (
-    <div>
+    <div style={{backgroundColor:'red'}}>
       <GraphComponent
         listPrice={listPrice}
         heading="Median list price vs median sale price"

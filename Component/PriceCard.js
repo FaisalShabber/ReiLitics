@@ -50,7 +50,7 @@ const PriceCard = ({ data, userPackageId, handleFreeSubscription, userEmail }) =
           {userPackageId === each._id ? (
             <button
               type="button"
-              className={`btn btn_width brdr_2 py-3 mt-5 mt-5 ${styled.button}`}
+              className={`btn btn_width brdr_2 py-3 mt-5 flex items-center ${styled.button}`}
               style={{ backgroundColor: "#2169ef", color: "#fff" }}
             >
               Currently Subscribed

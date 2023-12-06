@@ -541,7 +541,7 @@ const Dashboard = () => {
                       We can help you find some areas to look at by answering
                       some questions below.
                     </p>
-                    <div className="d-flex justify-content-center">
+                    <div className="d-flex justify-content-center t-w-full" >
                       <ReactSimpleChatbot
                         className="chatBot ali w-100"
                         steps={getSteps(

@@ -6,10 +6,11 @@ import { Slider } from "rsuite";
 
 const PurchaseInformation = ({ setFormData, handleChange, formData }) => {
   return (
-    <div
+    <div 
       style={{
         paddingBottom: "16px",
         borderBottom: "1px solid #E8ECFB",
+     
       }}
     >
       <h5
