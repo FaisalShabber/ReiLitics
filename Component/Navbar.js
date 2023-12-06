@@ -45,7 +45,7 @@ function NewNavbar() {
   return (
     <div
       className={clsx(
-        "t-flex t-items-center w-100 position-relative",
+        "grid t-place-items-center w-100 position-relative",
         classes.main_div
       )}
       style={{
