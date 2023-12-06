@@ -259,7 +259,7 @@ class AverageAprication extends React.Component {
         info: "zxcvbn",
         // fixed: "left",
         key: "region",
-        width: "15%",
+        width: "14%",
         font: "bold",
         onFilter: (value, record) => record.region.startsWith(value),
         filteredValue: filteredInfo.value || null,
@@ -300,7 +300,7 @@ class AverageAprication extends React.Component {
       {
         title: () => {
           return (
-            <div>
+            <div style={{width: 'max-content' }}>
               Growth{" "}
               <Tooltip
                 Tooltip
@@ -331,7 +331,7 @@ class AverageAprication extends React.Component {
           );
         },
         key: "rentalGrowth",
-        width: "14%",
+        width: "12%",
         // sorter: (a, b) => a.rentalGrowth - b.rentalGrowth,
         sortDirections: ["ascend", "descend"],
         sortOrder: sortedInfo.columnKey === "rentalGrowth" && sortedInfo.order,
@@ -342,7 +342,7 @@ class AverageAprication extends React.Component {
       {
         title: () => {
           return (
-            <div>
+            <div style={{     width: 'max-content' }}>
               Median{" "}
               <Tooltip
                 Tooltip
@@ -375,7 +375,7 @@ class AverageAprication extends React.Component {
           );
         },
         key: "median_rental",
-        width: "14%",
+        width: "12%",
         showSorterTooltip: false,
         ellipsis: true,
       },
@@ -383,7 +383,7 @@ class AverageAprication extends React.Component {
       {
         title: () => {
           return (
-            <div>
+            <div style={{ width: 'max-content'}}>
               Score{" "}
               <Tooltip
                 Tooltip
@@ -453,7 +453,7 @@ class AverageAprication extends React.Component {
           );
         },
         key: "LLfriendly",
-        width: "14%",
+        width: "12%",
         // sorter: (a, b) => a.LLfriendly - b.LLfriendly,
         sortDirections: ["ascend", "descend"],
         sortOrder: sortedInfo.columnKey === "avgGrowth" && sortedInfo.order,
@@ -463,7 +463,7 @@ class AverageAprication extends React.Component {
       {
         title: () => {
           return (
-            <div className="">
+            <div style={{ width: 'max-content'     }}>
               Appreciation{" "}
               <Tooltip
                 placement="top"
@@ -502,12 +502,7 @@ class AverageAprication extends React.Component {
       {
         title: () => {
           return (
-            <div
-              className=""
-              style={{
-                fontWeight: 500,
-              }}
-            >
+            <div style={{width: 'max-content', fontSize:'14px', fontWeight:'bold' }}>
               Tax{" "}
               <Tooltip
                 placement="top"
@@ -524,7 +519,7 @@ class AverageAprication extends React.Component {
         },
         // dataIndex: 'avgTax',
         key: "avgTax",
-        width: "13%",
+        width: "12%",
         render: (record, _text, _index) => {
           return (
             <span
@@ -547,7 +542,7 @@ class AverageAprication extends React.Component {
       {
         title: () => {
           return (
-            <div className="">
+            <div style={{     width: 'max-content' }}>
               Price{" "}
               <Tooltip
                 placement="top"
@@ -563,7 +558,7 @@ class AverageAprication extends React.Component {
         },
         dataIndex: "median",
         key: "median",
-        width: "15%",
+        width: "12%",
         render: (record, _text, _index) => {
           return (
             <span
@@ -587,7 +582,7 @@ class AverageAprication extends React.Component {
       {
         title: () => {
           return (
-            <div>
+            <div style={{     width: 'max-content' }}>
               Population{" "}
               <Tooltip
                 Tooltip
@@ -605,7 +600,7 @@ class AverageAprication extends React.Component {
         },
         dataIndex: "population",
         key: "population",
-        width: "13%",
+        width: "12%",
         render: (record, _text, _index) => {
           const numderData = Number(record);
           return (
