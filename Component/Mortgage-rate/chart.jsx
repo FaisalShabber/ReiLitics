@@ -28,6 +28,7 @@ function Chart({ data, fifteenYearData, packageName }) {
       toolbar: {
         show: packageName !== 'Free',
         zoom: true, // enable zoom
+        offsetY: window.innerWidth <= 768 ? -15 : 0,
       },
     },
     stroke: {
