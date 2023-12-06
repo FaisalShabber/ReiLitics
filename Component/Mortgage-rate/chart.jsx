@@ -7,6 +7,8 @@ const ReactApexChart = dynamic(() => import("react-apexcharts"), {
 
 function Chart({ data, fifteenYearData, packageName }) {
   const chartRef = useRef(null);
+
+
   const [series, setSeries] = useState([
     {
       name: "30-Year Mortgage Rate",
@@ -59,9 +61,10 @@ function Chart({ data, fifteenYearData, packageName }) {
       type: "datetime",
       categories: data?.map((obs) => obs.date),
       labels: {
+        hideOverlappingLabels:false,
         style: {
           colors: ["#555555"],
-          fontSize: "10px",
+          fontSize: window.innerWidth <= 768 ? "6px" : "10px",
         },
         format: "MMM, yyyy",
       },

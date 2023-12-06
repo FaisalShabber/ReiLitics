@@ -671,7 +671,7 @@ class AverageAprication extends React.Component {
                   <Spin />
                 </div>
               ) : (
-                <div>
+                <div> 
                   {this.state.data ? (
                     <Table
                       columns={columns}
@@ -685,7 +685,8 @@ class AverageAprication extends React.Component {
                       }}
                       dataSource={this.state.dataRegion}
                       onChange={this.handleChange}
-                      scroll={{ x: 576 }}
+                      scroll={{ x: 1200 }}
+
                     />
                   ) : (
                     <div

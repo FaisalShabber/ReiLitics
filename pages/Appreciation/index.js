@@ -248,7 +248,7 @@ class Aprecation extends React.Component {
         onFilter: (value, record) => record.region.startsWith(value),
         filteredValue: filteredInfo.value || null,
         sortOrder: sortedInfo.columnKey === "region" && sortedInfo.order,
-        sorter: (a, b) => a.region.localeCompare(b.region),
+        sorter: (a, b) => a.region.localeCompare(b.region), 
         sortDirections: ["ascend", "descend"],
         ellipsis: true,
         showSorterTooltip: false,
