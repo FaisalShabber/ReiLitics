@@ -259,7 +259,7 @@ class AverageAprication extends React.Component {
         info: "zxcvbn",
         // fixed: "left",
         key: "region",
-        width: "14%",
+        width: "16%",
         font: "bold",
         onFilter: (value, record) => record.region.startsWith(value),
         filteredValue: filteredInfo.value || null,
@@ -680,7 +680,7 @@ class AverageAprication extends React.Component {
                       }}
                       dataSource={this.state.dataRegion}
                       onChange={this.handleChange}
-                      scroll={{ x: 1200 }}
+                      scroll={{ x: 800 }}
 
                     />
                   ) : (
